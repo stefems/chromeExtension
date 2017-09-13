@@ -8,6 +8,19 @@
 			    "<all_urls>"
 			],
 			"js": ["jquery-3.2.1.min.js", "content.js"]
+		},
+		{
+		    "matches": [
+			    "http://www.npr.org/*"
+			],
+			"js": ["jquery-3.2.1.min.js", "urlSpecificScript.js"]
 		}
-	]
+
+	],
+	"browser_action": {
+		"default_icon": "extensionIcon.png"
+	},
+	"background": {
+	 	"scripts": ["background.js"]
+	}
 }
