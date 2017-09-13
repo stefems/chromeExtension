@@ -18,3 +18,23 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 	    });  
 	});
 });
+// chrome.browserAction.setPopup( function() {
+// 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+// 	    chrome.tabs.sendMessage(tabs[0].id, {action: "youtube"}, function(response) {
+// 	    	if (response) {
+
+// 	    	}
+// 	    });  
+// 	});
+// });
+
+chrome.tabs.onCreated.addListener(function(tab) {
+	chrome.tabs.sendMessage(tabs[0].id, {action: "open_dialog_box"}, function(response) {
+	    	if (response) {
+	    		globalState = "chat";
+	    		console.log(globalState);
+	    		console.log("Hey, they got our message and sent us a response!");
+	    		console.log(response);
+	    	}
+	    });
+})

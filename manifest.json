@@ -18,7 +18,8 @@
 
 	],
 	"browser_action": {
-		"default_icon": "extensionIcon.png"
+		"default_icon": "extensionIcon.png",
+		"default_popup": "pop.html"
 	},
 	"background": {
 	 	"scripts": ["background.js"]

@@ -15,14 +15,8 @@ console.log(window.location.href);
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-  	if (request) {
-		console.log("Getting message from the icon click!");
+   	if (request) {
 		console.log(request);
-		localStorage.setItem("stefExtension", "extension made data");
-		console.log(localStorage.getItem("stefExtension"));
-		sendResponse({
-		    response: "Message received"
-		});
   	}
   }
 );
